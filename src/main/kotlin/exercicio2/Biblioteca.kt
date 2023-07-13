@@ -11,7 +11,8 @@ class Biblioteca {
 
 fun mostrarMenu(): Int? {
     println(
-        "\n\t\t\t---MENU BIBLIOTECA---\n" +
+        "\n\t\t\t---SISTEMA BIBLIOTECA---\n" +
+                "\t\tOlá bibliotecário(a), bem vindo(a)!" +
                 "\nDeseja registrar livros de qual gênero?:" +
                 "\n1. Terror" +
                 "\n2. Epico" +
@@ -24,10 +25,7 @@ fun mostrarMenu(): Int? {
 
 
 fun cadastrarLivroTerror() {
-    print(
-        "\t\tOlá bibliotecário(a), bem vindo(a)!\n" +
-                "\nQuantos livros de Terror deseja registrar?: "
-    )
+    print("\nQuantos livros de Terror deseja registrar?: ")
     val quantLivros = readln().toIntOrNull()
 
     for (i in 1..quantLivros!!) {
@@ -42,10 +40,7 @@ fun cadastrarLivroTerror() {
 }
 
 fun cadastrarLivroEpico() {
-    print(
-        "\t\t\tOlá bibliotecário(a), bem vindo(a)!" +
-                "\n\t\tQuantos livros Epico deseja registrar? "
-    )
+    print("\nQuantos livros Epico deseja registrar?: ")
     val quantLivros = readln().toIntOrNull()
 
     for (i in 1..quantLivros!!) {
@@ -60,10 +55,7 @@ fun cadastrarLivroEpico() {
 }
 
 fun cadastrarLivroAutoAjuda() {
-    print(
-        "\t\t\tOlá bibliotecário(a), bem vindo(a)!" +
-                "\n\t\tQuantos livros de AutoAjuda deseja registrar? "
-    )
+    print("\nQuantos livros de AutoAjuda deseja registrar?: ")
     val quantLivros = readln().toIntOrNull()
 
     for (i in 1..quantLivros!!) {
