@@ -1,35 +1,45 @@
 package exercicio6
 
-open class Contas {
-    open fun depositar() {}
-    open fun sacar() {}
-    open fun saldo() {}
+open class Contas(var saldo: Double) {
+    open fun deposito(valor: Double) {
+        saldo += valor
+        println("Depósito de R$ $valor realizado. Novo saldo: R$ $saldo")
+    }
 
-    class ContaSalario(private val saldoAtual: Double = 1212.00, private var valorSaque: Double) : Contas() {
-
-        override fun depositar() {
-
+    open fun saque(valor: Double) {
+        if (valor > saldo) {
+            println("Saldo insuficiente")
+        } else {
+            saldo -= valor
+            println("Saque de R$ $valor realizado. Novo saldo: R$ $saldo")
         }
+    }
 
-        override fun sacar() {
-            if (valorSaque < saldoAtual || valorSaque < 0) {
-                println("Saldo insuficiente")
+    open fun exibirSaldo() {
+        println("Saldo atual: R$ $saldo")
+    }
+
+    class ContaSalario : Contas(1212.00) {
+        override fun deposito(valor: Double) {
+            println("Conta Salário só pode receber depósito do empregador.")
+        }
+    }
+
+    class ContaPoupanca() : Contas(0.00) {
+        override fun deposito(valor: Double) {
+            saldo += valor
+            println("Depósito de R$ $valor realizado. Novo saldo: R$ $saldo")
+        }
+    }
+
+    class ContaCorrente(saldoInicial: Double) : Contas(saldoInicial) {
+        override fun deposito(valor: Double) {
+            if (valor > 5000.00) {
+                println("Operação inválida, procure a sua agência.")
             } else {
-                val saque = saldoAtual - valorSaque
-                println(saque)
+                saldo += valor
+                println("Depósito de R$ $valor realizado. Novo saldo: R$ $saldo")
             }
         }
-
-        override fun saldo() {
-
-        }
-    }
-
-    class ContaPoupanca() : Contas() {
-
-    }
-
-    class ContaCorrente() : Contas() {
-
     }
 }
