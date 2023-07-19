@@ -3,24 +3,30 @@ Kotlin Orientado a Objetos
 # Exercícios - Exceções
 
 1. Crie uma Classe CalculoMatematico
+   
 a. Nela, crie um método divisao, que recebe como parâmetros os
 valores a serem divididos. O retorno é o resultado da divisão (todos os
 números devem ser do tipo inteiro)
+
 b. Crie uma arquivo para testar a CalculoMatematico. Crie um
 objeto CalculoMatematico e acesse o método divisao,
 tentando dividir 4 por 0.
+
 c. Crie um bloco try...catch no método divisão para tratar a
 operação realizada;
+
 d. No catch:
 i. o Informar o objeto do tipo ArithmeticException
 ii. Imprimir uma mensagem informando que a operação
 não pode ser realizada
 iii. Retorna zero
 
-2. Faça um programa de controle de lista de compras de acordo com
+3. Faça um programa de controle de lista de compras de acordo com
 as seguintes especificações:
+
 a. O programa deve ter um menu que peça para a pessoa usuária
 definir qual o tipo de alimento ela quer incluir na lista.
+
 b. A pessoa usuária só pode incluir alimentos do tipo: VERDURA,
 LEGUMES, GRÃOS e OUTROS.
 i. Caso a pessoa tente incluir outro tipo de alimento, o
@@ -60,6 +66,7 @@ quantidade vazia, ou seja, “” [abre e fecha aspas duplas sem
 nada dentro], o programa deve estourar uma exception do tipo
 UnsupportedOperationException com a mensagem “Não é
 permitido inserir valor vazio”.
+
 f. Para qualquer tipo de alimento, se a pessoa tentar inserir uma
 quantidade menor que zero, o sistema deve informar a pessoa
 usuária que não é possível inserir número negativos e pedir
@@ -79,11 +86,9 @@ i. Quando a pessoa decidir encerrar o processo, o sistema
 deve retornar a lista de compras com as informações de
 cada item a ser comprado de cada tipo.
 Exemplo: nomeAlimento - quantidadeAlimento
-
 ii. E, após mostrar em tela todos os alimentos a serem
 compradas, deve informar a quantidade de cada tipo de
 alimento a ser comprado.
-
 Exemplo de saída esperada:
 
 # [alface - 10.0 kg, catalonia - 10.0 kg, espinafre - 10.0 kg]
@@ -91,8 +96,10 @@ Exemplo de saída esperada:
 
 3. Elaborar um programa de conversão de moeda de acordo com as
 seguintes especificações (sempre usando OOP):
+
 a. O programa deve ter apresentar para a pessoa usuária “Boas
 vindas ao conversor de moedas”
+
 b. O programa deve perguntar qual a moeda que a pessoa quer
 converter, sendo que o programa só pode aceitar as seguintes
 opções de moeda:
@@ -106,9 +113,11 @@ c. Caso a pessoa digite qualquer outra moeda fora das
 mencionadas acima, o programa deve estourar uma exception
 do tipo IllegalArgumentException com a mensagem “Tipo de
 moeda inválido”.
+
 d. Após escolher qual o tipo de moeda a ser convertida, o
 programa deve informar a pessoa usuária que ele só sabe
 converter dinheiro para Real (R$).
+
 e. Após informar o tipo de moeda válida a ser convertida, o
 sistema deve pedir o valor a ser convertido no formato
 BigDecimal.
@@ -126,6 +135,7 @@ f. Após as entradas, o sistema deve fazer a devida conversão da
 moeda escolhida para Real (R$) de acordo com a cotação do
 dia. Você pode pegar o valor do dia no google e deixar estática
 em alguma parte da aplicação.
+
 g. Após a conversão o sistema deve mostrar a mensagem: “A
 [MOEDA] na cotação de hoje [DIA ATUAL] está em [VALOR DA
 COTAÇÃO], o valor que pediu para converter de [VALOR
