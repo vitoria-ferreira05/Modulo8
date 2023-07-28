@@ -1,0 +1,4 @@
+package servicoDePedidosTest
+
+class EstoqueTest {
+}
